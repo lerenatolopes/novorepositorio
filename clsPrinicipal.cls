@@ -11,10 +11,9 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-
-
 Public Function RetornarExtenso(pdblValor As Double) As String
-
+    
+    Dim i As Integer
     Dim strExtenso As String
     Dim strValor As String
     Dim vetValor() As String
@@ -23,7 +22,13 @@ Public Function RetornarExtenso(pdblValor As Double) As String
     Dim dblValor As Double
     
     strValor = CStr(pdblValor)
-    vetValor = Split(strValor, ",")
+    vetValor() = Split(strValor)
+'    i = 0
+'    While i < Len(strValor) - 1
+'        vetValor(i) = Split(Left(strValor, Len(strValor) - 1))
+'        i = i + 1
+'    Wend
+'
          
     If UBound(vetValor) > 0 Then
         If CDbl(vetValor(0)) = 1 And CDbl(vetValor(1)) = 0 Then
