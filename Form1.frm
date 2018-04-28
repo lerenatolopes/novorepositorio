@@ -15,3 +15,16 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
+
+
+Private Sub Form_Load()
+    Dim objValorMonetario As New clsRetornaValor
+    Dim strValor As String
+     
+    strValor = objValorMonetario.RetornarExtenso(1)
+    
+    MsgBox strValor, vbOKOnly
+    
+    Unload Me
+End Sub
