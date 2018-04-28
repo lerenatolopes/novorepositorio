@@ -15,8 +15,14 @@ Private Function retornaExtenso(dblValor As Double) As String
 
     Dim strExtenso As String
     Dim strValor As String
+    Dim vetValor() As String
     
-        
+    strValor = CStr(dblValor)
+    vetValor = Split(strValor, ",")
+            
+    If CDbl(vetValor(0)) = 1 And CDbl(vetValor(1)) = 0 Then
+        strExtenso = "Um real."
+    End
 
 End Function
 
